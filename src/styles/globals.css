@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #1A1A2E;
+  color: #E6E6E6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #16213E;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E9B872;
+  border-radius: 5px;
+}
+
+/* Hover and interaction effects */
+.hover-gold-effect {
+  transition: all 0.3s ease;
+}
+
+.hover-gold-effect:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(233, 184, 114, 0.5);
+}
+
+/* Button styles */
+.btn-gold {
+  @apply bg-accent-gold text-primary-dark px-4 py-2 rounded-lg 
+  transition duration-300 ease-in-out 
+  hover:bg-accent-light-gold 
+  hover:shadow-gold-glow 
+  transform hover:scale-105;
+}
+
+/* Card styles */
+.dark-card {
+  @apply bg-secondary-dark rounded-lg p-6 
+  shadow-dark-glow 
+  transition duration-300 ease-in-out 
+  hover:shadow-gold-glow;
+}

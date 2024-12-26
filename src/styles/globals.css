@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 body {
-  background-color: #1A1A2E;
+  background-color: #1A1A2E; /* Using the background color from tailwind config */
   color: #E6E6E6;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Custom scrollbar */
+/* Rest of the CSS remains the same */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -47,4 +47,15 @@ body {
   shadow-dark-glow 
   transition duration-300 ease-in-out 
   hover:shadow-gold-glow;
+}
+
+.card-description {
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  overflow: hidden;
+  max-height: 100px; /* Initial state */
+}
+
+.card-description.expanded {
+  max-height: 500px; /* Adjust based on content */
+  opacity: 1;
 }
